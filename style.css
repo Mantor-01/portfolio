@@ -1,0 +1,443 @@
+* {
+    /* permet de mettre du padding même si la largueur est déjà au max */
+    box-sizing: border-box;
+}
+
+:root {
+    --color_1: #D89584;
+    --color_2: #F4F4F4;
+    --color_3: #979797;
+    --color_hover: greenyellow;
+
+    --portfolio_separateur: 48%;
+}
+
+
+
+/* ---------- main ---------- */
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+    height: 270px;
+    outline: none;
+    display: block;
+}
+
+/* ---------- heads ---------- */
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 34px;
+    margin-top: 0px;
+}
+
+h3 {
+    font-size: 28px;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* style pour centrer les éléments */
+.center {
+    text-align: center;
+    width: 100%;
+}
+
+.section {
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    /* adapte la hauteur des sections en fonction des contenus */
+    overflow: auto;
+}
+
+
+
+
+/* ---------- div ---------- */
+
+div.cover {
+    background: url(RESOURCES/cover_overlay.png) no-repeat center/ 100% 100%, url(RESOURCES/cover.jpg) no-repeat center/cover;
+    height: 360px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+div.cover p {
+    color: lightgray;
+    text-align: center;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+div.cover_contact {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    border-left: 4px solid var(--color_1);
+    padding-left: 8px;
+}
+
+div.cover_contact p {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* sélectionne le premier paragraphe de la div */
+div.cover_contact p:first-child {
+    margin-bottom: 15px;
+}
+
+div.cover_contact a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+div.cover_contact a:hover {
+    color: var(--color_hover);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+div.section_grise_1 {
+    background: url(RESOURCES/triangle2white.svg) no-repeat center bottom -1px/100%;
+    background-color: var(--color_2);
+    padding-bottom: 80px;
+}
+
+div.section_grise_1 p {
+    color: #656565;
+    font-size: 22px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+div.section_grise_portfolio {
+    background: url(RESOURCES/triangle1white.svg) no-repeat center top/100%;
+    background-color: var(--color_2);
+    padding-top: 80px;
+    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+div.separateur {
+    border: 1px solid var(--color_3);
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.p_en_savoir_plus {
+    width: 60%;
+    float: right;
+    padding-left: 20px;
+}
+
+div.p_en_savoir_plus p {
+    margin-top: 0;
+}
+
+div.border_en_savoir_plus {
+    border-left: 4px solid var(--color_1);
+    padding-left: 8px;
+    display: inline-block;
+    height: 50px;
+}
+
+div.portfolio_barre_verticale {
+    height: 50px;
+    width: 4px;
+    background-color: var(--color_1);
+    margin-right: 10px;
+}
+
+div.frame {
+    background-color: white;
+    margin: 20px 20px 20px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+div.frame_border {
+    border-left: 4px solid var(--color_1);
+    padding-left: 8px;
+    display: inline-block;
+    height: 35px;
+}
+
+
+
+/* ---------- img ---------- */
+
+img.cover_profile {
+    height: 100px;
+    position: relative;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 50px;
+    border-radius: 50%;
+}
+
+img.img_en_savoir_plus {
+    width: 40%;
+}
+
+img.portfolio_img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+img.frame_profile {
+    height: 100px;
+    margin-left: 12%;
+    display: inline-block;
+}
+
+
+
+/* ---------- a ---------- */
+
+a.contact_button {
+    background: #00000040;
+    border: 3px solid var(--color_1);
+    border-radius: 4px;
+    color: var(--color_1);
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 8px 20px;
+    /* supprime l'effet de soulignement d'un lien */
+    text-decoration: none;
+    /* <a> est inline par défaut */
+    display: inline-block;
+    margin-top: 18px;
+}
+
+/* ajoute un nouvel effet quand la souris survole l'élément */
+a.contact_button:hover {
+    color: var(--color_hover);
+    border: 3px solid var(--color_hover);
+}
+
+a.link:hover {
+    font-weight: bold;
+}
+
+
+
+/* ---------- table ---------- */
+table.portfolio_1 {
+    width: var(--portfolio_separateur);
+    display: inline-block;
+}
+
+table.portfolio_2 {
+    width: var(--portfolio_separateur);
+    float: right;
+}
+
+table.frame_table {
+    width: 100%;
+}
+
+table.frame_table p:first-child {
+    margin-top: 0;
+}
+
+td.frame_profile_td {
+    width: 40%;
+    text-align: center;
+}
+
+
+
+/* ---------- PORTFOLIO ---------- */
+.portfolio_header {
+    height: 100px;
+    background: url(RESOURCES/cover.jpg) no-repeat center top/100%;
+}
+
+h1.portfolio {
+    color: black;
+    font-size: 46px;
+}
+
+h2.portfolio {
+    font-size: 26px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+/* DIV */
+div.portfolio_header p {
+    color: white;
+    font-size: 26px;
+    display: inline-block;
+}
+
+div.portfolio_contact_button {
+    float: right;
+}
+
+div.portfolio_contact_button a {
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+div.portfolio_back {
+    text-align: left;
+    margin-right: 10px;
+    background-color: var(--color_3);
+}
+
+/* TABLE */
+table.portfolio_table {
+    width: 100%;
+}
+
+td.portfolio_table_td_1 {
+    width: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* IMG */
+img.portfolio {
+    width: 70%;
+    max-width: 475px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 30px;
+}
+
+/* ---------- MOBILE PHONE ---------- */
+@media only screen and (max-width: 768px) {
+
+    iframe {
+        height: 280px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    /* HEADS */
+    h1 {
+        font-size: 38px;
+        margin-top: 6px;
+    }
+
+    h1.portfolio {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h2.portfolio {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    /* DIV */
+    div.cover p {
+        font-size: 13px;
+        margin-top: 2px;
+    }
+
+    div.section_grise_1 {
+        padding-bottom: 30px;
+    }
+
+    div.p_en_savoir_plus {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    div.section_grise_portfolio {
+        padding-top: 50px;
+    }
+
+    div.frame {
+        margin: 8px;
+        margin-bottom: auto;
+        padding: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    div.portfolio_contact_button a {
+        text-align: left;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    /* IMG */
+    img.cover_profile {
+        height: 90px;
+        margin-top: 75px;
+    }
+
+    img.img_en_savoir_plus {
+        width: 70%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    img.frame_profile {
+        height: 70px;
+        margin-left: 0;
+    }
+
+    /* TABLE */
+    table.portfolio_1 {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    table.portfolio_2 {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    td.frame_profile_td {
+        width: 30%;
+    }
+
+    table.portfolio_table {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    table.portfolio_table p {
+        font-size: 20px;
+    }
+}
